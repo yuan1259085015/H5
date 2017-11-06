@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li{
+				width: 70px;
+				height: 30px;
+				background: yellow;
+				float: left;
+				list-style: none;
+				margin-left: 10px;
+				text-align: center;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li id="bt1">1</li>
+			<li id="bt2">2</li>
+			<li id="bt3">3</li>
+			<li id="bt4">4</li>
+			<li id="bt5">5</li>
+			<li id="bt6">6</li>
+			<li id="bt7">7</li>
+			<li id="bt8">8</li>
+		</ul>
+		<div class="audio">
+			<audio src="img/1.mp3"></audio>
+			<audio src="img/2.mp3"></audio>
+			<audio src="img/3.mp3"></audio>
+			<audio src="img/4.mp3"></audio>
+			<audio src="img/5.mp3"></audio>
+			<audio src="img/6.mp3"></audio>
+			<audio src="img/7.mp3"></audio>
+			<audio src="img/8.mp3"></audio>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+			<script type="text/javascript">
+				
+				$("li").mousemove(function(){
+					var i = $(this).index();
+					var a = $("audio").eq(i).get(0);
+					
+					a.load();
+					a.play();
+				})
+			</script>
+		
+	</body>
+</html>
